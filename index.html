@@ -4,126 +4,96 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Baylor University SIP</title>
+  <title>Student Portal</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-  <div id="login-page">
-    <div class="login-container">
-      <h2>Login</h2>
-      <form id="login-form">
-        <input type="email" id="bear-id" placeholder="Bear ID" required>
-        <input type="password" id="password" placeholder="Password" required>
-        <button type="submit">Login</button>
-      </form>
-    </div>
+  <div class="login-container" id="login-page">
+    <h2>Welcome to Baylor University Student Portal</h2>
+    <img src="https://i.ibb.co/gSmdS6L/bayloruniversity-green-jpg.jpg" alt="Baylor University">
+    <form id="login-form">
+      <input type="text" id="email" placeholder="Email" required>
+      <input type="password" id="password" placeholder="Password" required>
+      <button type="submit">Login</button>
+    </form>
   </div>
-
-  <div id="dashboard-page" style="display: none;">
+  <div class="dashboard" id="dashboard-page" style="display: none;">
     <div class="sidebar">
+      <a href="#" id="sip-link">Student Portal</a>
       <a href="#" id="dashboard-link">Dashboard</a>
       <a href="#" id="registration-link">Registration</a>
       <a href="#" id="statement-link">Statement of Results</a>
-      <a href="#" id="sip-link">SIP Student Portal</a>
-      <a href="#" id="message-link">Message</a>
+      <a href="#" id="message-link">Messages</a>
       <a href="#" id="evaluation-link">Lecture Evaluation</a>
       <a href="#" id="timetable-link">Timetable</a>
+      <a href="#" id="awards-link">Awards</a>
     </div>
     <div class="content">
-      <div id="dashboard-content" class="content-section">
-        <h2>Your Personal Details</h2>
-        <table>
-          <tr>
-            <td>Title:</td>
-            <td>MR.</td>
-          </tr>
-          <tr>
-            <td>Name:</td>
-            <td>Kelvin Bright Baidoo</td>
-          </tr>
-          <tr>
-            <td>Programme:</td>
-            <td>Bachelor of Medicine</td>
-          </tr>
-          <tr>
-            <td>Gender:</td>
-            <td>M</td>
-          </tr>
-          <tr>
-            <td>Date of Birth:</td>
-            <td>04 September, 2003</td>
-          </tr>
-          <tr>
-            <td>Level:</td>
-            <td>100</td>
-          </tr>
-          <tr>
-            <td>Hall:</td>
-            <td>Teal Hall</td>
-          </tr>
-          <tr>
-            <td>Institutional Email:</td>
-            <td>kelvin.baidoo@stu.ucc.edu.gh</td>
-          </tr>
-          <tr>
-            <td>Personal Email:</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Campus Address:</td>
-            <td>Sid Richardson Building, Room 124</td>
-          </tr>
-          <tr>
-            <td>GPS Address:</td>
-            <td>W84V+6P, Waco, TX 76798, USA</td>
-          </tr>
-          <tr>
-            <td>Cellphone:</td>
-            <td>0502534684</td>
-          </tr>
-          <tr>
-            <td>Home Phone:</td>
-            <td>0502534684</td>
-          </tr>
-          <tr>
-            <td>Home Address:</td>
-            <td>1311 S 5th St, Waco, TX 76706</td>
-          </tr>
-          <tr>
-            <td>Postal Address:</td>
-            <td>1311 S 5th St, Waco, TX 76706</td>
-          </tr>
-          <tr>
-            <td>Postal Town:</td>
-            <td>Waco</td>
-          </tr>
-          <tr>
-            <td>Place of Birth:</td>
-            <td>Swedru</td>
-          </tr>
-          <tr>
-            <td>Hometown:</td>
-            <td>Swedru</td>
-          </tr>
-        </table>
-        <button>Update</button>
+      <div id="sip-content" class="content-section">
+        <h2>Welcome to the Student Portal</h2>
+        <img src="https://i.ibb.co/gSmdS6L/bayloruniversity-green-jpg.jpg" alt="Baylor University">
+        <p>Welcome to the Baylor University Student Portal. Navigate through the sidebar to access various sections of your student account.</p>
       </div>
-      <div id="registration-content" class="content-section" style="display: none;">
-        <h2>Regular Course Registration</h2>
-        <p>BBAHRW</p>
-        <p>From: Thursday, May 30, 2024</p>
-        <p>To: Sunday, June 16, 2024</p>
-        <button>Regular Registration</button>
+      <div id="dashboard-content" class="content-section" style="display: none;">
+        <h2>Dashboard</h2>
+        <form>
+          <div class="form-group">
+            <label for="title">Title:</label>
+            <input type="text" id="title" value="MR." readonly>
+          </div>
+          <div class="form-group">
+            <label for="first-name">First Name:</label>
+            <input type="text" id="first-name" value="KELVIN" readonly>
+          </div>
+          <div class="form-group">
+            <label for="middle-name">Middle Name:</label>
+            <input type="text" id="middle-name" value="BRIGHT" readonly>
+          </div>
+          <div class="form-group">
+            <label for="surname">Surname:</label>
+            <input type="text" id="surname" value="BAIDOO" readonly>
+          </div>
+          <div class="form-group">
+            <label for="programme">Programme:</label>
+            <input type="text" id="programme" value="BACHELOR OF MEDICINE" readonly>
+          </div>
+          <div class="form-group">
+            <label for="level">Level:</label>
+            <input type="text" id="level" value="100" readonly>
+          </div>
+          <div class="form-group">
+            <label for="hall">Hall:</label>
+            <input type="text" id="hall" value="Teal Hall" readonly>
+          </div>
+          <div class="form-group">
+            <label for="institutional-email">Institutional Email:</label>
+            <input type="email" id="institutional-email" value="kelvin.baidoo@stu.ucc.edu.gh" readonly>
+          </div>
+          <div class="form-group">
+            <label for="gps-address">GPS Address:</label>
+            <input type="text" id="gps-address" value="Baylor Medical Center, 3500 Gaston Ave, Dallas, TX 75246" readonly>
+          </div>
+          <div class="form-group">
+            <label for="cellphone">Cellphone:</label>
+            <input type="text" id="cellphone" value="0502534684" readonly>
+          </div>
+          <div class="form-group">
+            <label for="postal-address">Postal Address:</label>
+            <input type="text" id="postal-address" value="Baylor University, Waco, TX 76798" readonly>
+          </div>
+          <div class="form-group">
+            <label for="hometown">Hometown:</label>
+            <input type="text" id="hometown" value="Swedru" readonly>
+          </div>
+          <div class="form-group">
+            <label for="place-of-birth">Place of Birth:</label>
+            <input type="text" id="place-of-birth" value="Swedru" readonly>
+          </div>
+        </form>
       </div>
       <div id="statement-content" class="content-section" style="display: none;">
-        <h2>Classic Result View</h2>
-        <div class="result-header">
-          <p>Registration No.: <strong>5241560024</strong></p>
-          <p>Programme & Level: <strong>Bachelor of Medicine, Level 100</strong></p>
-          <p>Student Name: <strong>Kelvin Bright Baidoo</strong></p>
-          <p>DOA - DOC: <strong>SEP2023 - JUL2027</strong></p>
-        </div>
+        <h2>Statement of Results</h2>
         <table>
           <thead>
             <tr>
@@ -138,9 +108,9 @@
             <tr>
               <td>MED101</td>
               <td>Human Anatomy</td>
-              <td>4</td>
+              <td>3</td>
               <td>A</td>
-              <td>16</td>
+              <td>12</td>
             </tr>
             <tr>
               <td>MED102</td>
@@ -171,99 +141,46 @@
               <td>12</td>
             </tr>
             <tr>
-              <td>MED106</td>
-              <td>Microbiology</td>
-              <td>2</td>
+              <td>MED201</td>
+              <td>Immunology</td>
+              <td>3</td>
               <td>A</td>
-              <td>8</td>
-            </tr>
-          </tbody>
-          <tfoot>
-            <tr>
-              <td colspan="2">Total</td>
-              <td>18</td>
-              <td></td>
-              <td>72</td>
+              <td>12</td>
             </tr>
             <tr>
-              <td colspan="4">GPA</td>
-              <td>4.0</td>
-            </tr>
-            <tr>
-              <td colspan="4">Cumulative GPA</td>
-              <td>4.0</td>
-            </tr>
-          </tfoot>
-        </table>
-        <br>
-        <h2>Additional Results</h2>
-        <div class="result-header">
-          <p>Registration No.: <strong>5241560024</strong></p>
-          <p>Programme & Level: <strong>Bachelor of Medicine, Level 100</strong></p>
-          <p>Student Name: <strong>Kelvin Bright Baidoo</strong></p>
-          <p>DOA - DOC: <strong>SEP2023 - JUL2027</strong></p>
-        </div>
-        <table>
-          <thead>
-            <tr>
-              <th>Code</th>
-              <th>Course Title</th>
-              <th>Credit</th>
-              <th>Grade</th>
-              <th>GP</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>MED107</td>
-              <td>Medical Ethics</td>
-              <td>2</td>
-              <td>A</td>
-              <td>8</td>
-            </tr>
-            <tr>
-              <td>MED108</td>
+              <td>MED202</td>
               <td>Neuroscience</td>
               <td>3</td>
               <td>A</td>
               <td>12</td>
             </tr>
             <tr>
-              <td>MED109</td>
-              <td>Cardiology</td>
+              <td>MED203</td>
+              <td>Public Health</td>
               <td>3</td>
               <td>A</td>
               <td>12</td>
             </tr>
             <tr>
-              <td>MED110</td>
-              <td>Endocrinology</td>
+              <td>MED204</td>
+              <td>Emergency Medicine</td>
               <td>3</td>
               <td>A</td>
               <td>12</td>
             </tr>
             <tr>
-              <td>MED111</td>
-              <td>Oncology</td>
+              <td>MED205</td>
+              <td>Psychiatry</td>
               <td>3</td>
               <td>A</td>
               <td>12</td>
             </tr>
             <tr>
-              <td>MED112</td>
-              <td>Dermatology</td>
-              <td>2</td>
-              <td>A</td>
-              <td>8</td>
+              <td colspan="4">Total Credit Hours</td>
+              <td>30</td>
             </tr>
           </tbody>
           <tfoot>
-            <tr>
-              <td colspan="2">Total</td>
-              <td>16</td>
-              <td></td>
-              <td>64</td>
-            </tr>
             <tr>
               <td colspan="4">GPA</td>
               <td>4.0</td>
@@ -275,17 +192,37 @@
           </tfoot>
         </table>
       </div>
-      <div id="sip-content" class="content-section" style="display: none;">
-        <h2>SIP Student Portal</h2>
-        <p>Welcome to the SIP Student Portal. Here you can find all the resources you need.</p>
-      </div>
       <div id="message-content" class="content-section" style="display: none;">
-        <h2>Message</h2>
-        <p>You have no new messages.</p>
+        <h2>Messages</h2>
+        <p>No new messages.</p>
       </div>
       <div id="evaluation-content" class="content-section" style="display: none;">
         <h2>Lecture Evaluation</h2>
-        <p>Please complete your lecture evaluations.</p>
+        <div class="form-group">
+          <label for="course-code-select">Course Code:</label>
+          <select id="course-code-select" onchange="populateLecturers()">
+            <option value="MED101">MED101</option>
+            <option value="MED102">MED102</option>
+            <option value="MED103">MED103</option>
+            <option value="MED104">MED104</option>
+            <option value="MED105">MED105</option>
+            <option value="MED106">MED106</option>
+            <option value="MED107">MED107</option>
+            <option value="MED201">MED201</option>
+            <option value="MED202">MED202</option>
+            <option value="MED203">MED203</option>
+            <option value="MED204">MED204</option>
+            <option value="MED205">MED205</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="course-name">Course:</label>
+          <input type="text" id="course-name" readonly>
+        </div>
+        <div class="form-group">
+          <label for="lecturer-select">Lecturer:</label>
+          <select id="lecturer-select"></select>
+        </div>
       </div>
       <div id="timetable-content" class="content-section" style="display: none;">
         <h2>Timetable</h2>
@@ -293,50 +230,67 @@
           <thead>
             <tr>
               <th>Day</th>
-              <th>Time</th>
-              <th>Course</th>
-              <th>Lecture Hall</th>
+              <th>8:00 - 10:00</th>
+              <th>10:00 - 12:00</th>
+              <th>12:00 - 2:00</th>
+              <th>2:00 - 4:00</th>
+              <th>4:00 - 6:00</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>Monday</td>
-              <td>8:00 AM - 10:00 AM</td>
-              <td>Human Anatomy</td>
-              <td>Baylor Sciences Building, Room A207</td>
-            </tr>
-            <tr>
-              <td>Monday</td>
-              <td>11:00 AM - 1:00 PM</td>
-              <td>Biochemistry</td>
-              <td>Sid Richardson Building, Room 124</td>
+              <td>Human Anatomy<br>Room 101</td>
+              <td>Biochemistry<br>Room 102</td>
+              <td>Physiology<br>Room 103</td>
+              <td>Pathology<br>Room 104</td>
+              <td>Pharmacology<br>Room 105</td>
             </tr>
             <tr>
               <td>Tuesday</td>
-              <td>9:00 AM - 11:00 AM</td>
-              <td>Physiology</td>
-              <td>Baylor Sciences Building, Room A108</td>
+              <td>Microbiology<br>Room 201</td>
+              <td>Medical Genetics<br>Room 202</td>
+              <td>Immunology<br>Room 203</td>
+              <td>Neuroscience<br>Room 204</td>
+              <td>Public Health<br>Room 205</td>
             </tr>
             <tr>
               <td>Wednesday</td>
-              <td>8:00 AM - 10:00 AM</td>
-              <td>Pathology</td>
-              <td>Sid Richardson Building, Room 224</td>
+              <td>Emergency Medicine<br>Room 301</td>
+              <td>Psychiatry<br>Room 302</td>
+              <td>Human Anatomy<br>Room 101</td>
+              <td>Biochemistry<br>Room 102</td>
+              <td>Physiology<br>Room 103</td>
             </tr>
             <tr>
               <td>Thursday</td>
-              <td>10:00 AM - 12:00 PM</td>
-              <td>Pharmacology</td>
-              <td>Baylor Sciences Building, Room A307</td>
+              <td>Pathology<br>Room 104</td>
+              <td>Pharmacology<br>Room 105</td>
+              <td>Microbiology<br>Room 201</td>
+              <td>Medical Genetics<br>Room 202</td>
+              <td>Immunology<br>Room 203</td>
             </tr>
             <tr>
               <td>Friday</td>
-              <td>1:00 PM - 3:00 PM</td>
-              <td>Microbiology</td>
-              <td>Sid Richardson Building, Room 324</td>
+              <td>Neuroscience<br>Room 204</td>
+              <td>Public Health<br>Room 205</td>
+              <td>Emergency Medicine<br>Room 301</td>
+              <td>Psychiatry<br>Room 302</td>
+              <td></td>
             </tr>
           </tbody>
         </table>
+      </div>
+      <div id="awards-content" class="content-section" style="display: none;">
+        <h2>Awards</h2>
+        <ul>
+          <li>Best Student in Medicine</li>
+          <li>Best Microbiology Student in the School</li>
+          <li>Outstanding Performance in Human Anatomy</li>
+          <li>Top Scorer in Pathology</li>
+          <li>Excellence in Biochemistry</li>
+          <li>Best Presentation in Public Health</li>
+        </ul>
       </div>
     </div>
   </div>
