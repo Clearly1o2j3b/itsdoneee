@@ -1,126 +1,77 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
+document.getElementById("login-form").addEventListener("submit", function (e) {
+  e.preventDefault();
+  document.getElementById("login-page").style.display = "none";
+  document.getElementById("dashboard-page").style.display = "flex";
+});
+
+document.getElementById("sip-link").addEventListener("click", function () {
+  showContent("sip-content");
+});
+
+document
+  .getElementById("dashboard-link")
+  .addEventListener("click", function () {
+    showContent("dashboard-content");
+  });
+
+document
+  .getElementById("registration-link")
+  .addEventListener("click", function () {
+    showContent("registration-content");
+  });
+
+document
+  .getElementById("statement-link")
+  .addEventListener("click", function () {
+    showContent("statement-content");
+  });
+
+document.getElementById("message-link").addEventListener("click", function () {
+  showContent("message-content");
+});
+
+document
+  .getElementById("evaluation-link")
+  .addEventListener("click", function () {
+    showContent("evaluation-content");
+  });
+
+document
+  .getElementById("timetable-link")
+  .addEventListener("click", function () {
+    showContent("timetable-content");
+  });
+
+document.getElementById("awards-link").addEventListener("click", function () {
+  showContent("awards-content");
+});
+
+function showContent(contentId) {
+  const contentSections = document.querySelectorAll(".content-section");
+  contentSections.forEach((section) => {
+    section.style.display = "none";
+  });
+  document.getElementById(contentId).style.display = "block";
 }
 
-h2 {
-    color: #00331A;
+function populateLecturers() {
+  const courseCode = document.getElementById("course-code-select").value;
+  const lecturers = {
+    MED101: "Dr. Smith",
+    MED102: "Dr. Johnson",
+    MED103: "Dr. Williams",
+    MED104: "Dr. Brown",
+    MED105: "Dr. Jones",
+    MED106: "Dr. Garcia",
+    MED107: "Dr. Martinez",
+    MED201: "Dr. Rodriguez",
+    MED202: "Dr. Martinez",
+    MED203: "Dr. Hernandez",
+    MED204: "Dr. Lopez",
+    MED205: "Dr. Gonzalez"
+  };
+  document.getElementById("course-name").value = courseCode;
+  const lecturerSelect = document.getElementById("lecturer-select");
+  lecturerSelect.innerHTML = `<option value="${lecturers[courseCode]}">${lecturers[courseCode]}</option>`;
 }
 
-.login-container {
-    width: 300px;
-    margin: 100px auto;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.login-container h2 {
-    margin-bottom: 20px;
-}
-
-.login-container input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-.login-container button {
-    width: 100%;
-    padding: 10px;
-    background-color: #00331A;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.login-container button:hover {
-    background-color: #575757;
-}
-
-.sidebar {
-    width: 200px;
-    background-color: #00331A;
-    padding-top: 20px;
-    position: fixed;
-    height: 100%;
-    overflow: auto;
-}
-
-.sidebar a {
-    padding: 15px;
-    text-decoration: none;
-    font-size: 18px;
-    color: #fff;
-    display: block;
-}
-
-.sidebar a:hover {
-    background-color: #575757;
-}
-
-.content {
-    margin-left: 200px;
-    padding: 20px;
-}
-
-.content-section {
-    display: none;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-
-table, th, td {
-    border: 1px solid #ddd;
-}
-
-th, td {
-    padding: 10px;
-    text-align: left;
-}
-
-th {
-    background-color: #f2f2f2;
-}
-
-tfoot td {
-    font-weight: bold;
-}
-
-button {
-    padding: 10px 20px;
-    background-color: #00331A;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #575757;
-}
-
-@media screen and (max-width: 600px) {
-    .sidebar {
-        width: 100%;
-        height: auto;
-        position: relative;
-    }
-    .sidebar a {
-        float: left;
-    }
-    .content {
-        margin-left: 0;
-        width: 100%;
-    }
-}
